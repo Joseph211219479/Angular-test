@@ -14,9 +14,26 @@
       <div class="subject" >
         <p>{{fundList.fund.security}}</p>
       </div>
-
     </div>
-  </div>
+
+    <div class="row">
+        <div class="Fund size" >
+          <p>{{fundList.fund['Fund Size']}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="Launch Date" >
+        <p>{{fundList.fund['Launch Date'] |date }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="Ticker Symbol" >
+        <p>{{fundList.fund['Ticker Symbol'] }}</p>
+      </div>
+    </div>
+
 </div>
 
 <div class="footer">
