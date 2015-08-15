@@ -1,0 +1,5 @@
+{
+    "directory": "app/vendor/bower_components",
+	"proxy": "http://learn19:dante@155.238.4.87:3128",
+    "https-proxy": "http://learn19:dante@155.238.4.87:3128"
+}
