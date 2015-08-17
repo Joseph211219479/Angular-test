@@ -14,6 +14,8 @@ app.factory('funds', ['$http',function($http){
       input = input.split('/');
       return (new Date(input[2] + ',' + input[1] + ',' + input[0]));
     };
+
+
   }]);
 
 

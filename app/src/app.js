@@ -5,14 +5,15 @@ var app = angular.module('fundInformationApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute'
-]).
-  config(function ($routeProvider) {
+]);
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'src/common/views/main.html',
         controller: 'MainCtrl'
       })//redundant
-      .when('/fundInformation',{
+      .when('/fundInformation/',{
         templateUrl:'src/common/views/fundInformation.html',
         controller: 'MainCtrl'
       })
