@@ -20,7 +20,7 @@
       <div class="row">
         <div class="cell"> Launch Date  </div>
         <div class="cell">:</div>
-        <div class="cell" >{{fundList.fund['Launch Date']|isNull | ldate | date:'yyyy-MM-dd' }} </div>
+        <div class="cell" >{{fundList.fund['Launch Date']|isNull | ldate |date:'dd-MM-yyyy'}} </div>
       </div>
 
       <!-- bug -- fix placeholder -- does not remove when data are added -->
@@ -93,7 +93,7 @@
       <div class="row">
         <div class="cell">Date</div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund.Date |isNull|ldate |date:"yyyy-MM-dd"}}</div>
+        <div class="cell">{{fundList.fund.Date |isNull|ldate |date:'dd-MM-yyyy'}}</div>
       </div>
 
     </div>
