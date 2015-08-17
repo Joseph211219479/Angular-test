@@ -1,49 +1,49 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
   </ul>
-  <h3 class="text-muted">joseph angular test</h3>
+  <h3 class="text-muted">Joseph Angular Test</h3>
 </div>
-
-
 
 <!--just here for the time being ... modify later -->
 <div class="body" ng-controller="MainCtrl" >
+  <h5>{{fundList.fund['Fund Name']}} </h5>
   <div class="container">
-    <div class="row">
-      <div class="subject" >
-        <p>{{fundList.fund.security}}</p>
+    <div class="table">
+      <div class="row">
+         <div class="cell"> Security : </div>
+        <div class="cell">{{fundList.fund.security}}</div>
+      </div>
+
+      <div class="row">
+        <div class="cell">Fund Amount :</div>
+        <div class="cell">
+         {{fundList.fund.Currency}} {{fundList.fund['Fund Size'] |number}}</div>
+      </div>
+
+      <div class="row">
+       <div class="cell"> Launch Date : </div>
+        <div class="cell" >{{fundList.fund['Launch Date'] | ldate | date:'yyyy-MM-dd' }} </div>
+      </div>
+
+      <!-- bug -- fix placeholder -- does not remove when data are added -->
+      <div class="row">
+       <div class="cell">Ticker Symbol : </div>
+        <div class="cell"  data-placeholder='--'>{{fundList.fund['Ticker Symbol']}} </div>
+      </div>
+
+
+      //route does not work
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"> <button ng-click="fullFunds('/fundInformation')">Full Discr.</button>  </div>
       </div>
     </div>
 
-    <div class="row">
-        <div class="Fund size" >
-          <p>{{fundList.fund['Fund Size']}}</p>
-        </div>
-    </div>
 
-
-    <div class="row" >{{fundList.fund['Launch Date'] | ldate|date}}</div>
-
-
-    <!--<div class="row" >
-      <div class="Ticker Symbol" >
-        <p>sDate({{fundList.fund['Ticker Symbol'] }})</p>
-      </div>
-    </div>-->
-
-<!--
-    <div class="row">
-      <tr ng-repeat="fund in format">
-        <td>{{key}}<td>{{value}}</td></td>
-        </tr>
-      </tr>
-    </div>
--->
 
 </div>
+
 </div>
 <div class="footer">
   <p>♥ from the Yeoman team</p>

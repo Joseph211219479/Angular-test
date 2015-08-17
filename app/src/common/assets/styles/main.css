@@ -4,6 +4,15 @@ body {
   padding-bottom: 20px;
 }
 
+.table { display: table; }
+.row { display: table-row; }
+.cell { display: table-cell; }
+
+/* still needs some .js to remove bug*/
+div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
+  content: attr(data-placeholder);
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

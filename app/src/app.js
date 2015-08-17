@@ -11,28 +11,12 @@ var app = angular.module('fundInformationApp', [
       .when('/', {
         templateUrl: 'src/common/views/main.html',
         controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
-/*
-angular.module('fundInformationApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute'
-])
-
-  .
-  config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'src/common/views/main.html',
+      })//redundant
+      .when('/fundInformation',{
+        templateUrl:'src/common/views/fundInformation.html',
         controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
-*/
