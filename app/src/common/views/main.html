@@ -1,44 +1,38 @@
 <div class="body" ng-controller="MainCtrl" >
 
   <div class="container">
-    <a href="#/fundInformation" ><h3>{{fundList.fund['Fund Name']}} </h3></a>
+    <a href="#/fundInformation" ><h3>{{fundList.fund['Fund Name']|isNull}} </h3></a>
 
     <div class="table">
       <div class="row">
          <div class="cell"> Security </div>
         <div class="cell">:</div>
-        <div class="cell" id="1">{{fundList.fund.security}}</div>
+        <div class="cell" >{{fundList.fund.security|isNull}}</div>
       </div>
 
       <div class="row">
         <div class="cell">Fund Amount </div>
         <div class="cell">:</div>
-        <div class="cell" id="2"> {{fundList.fund.Currency}} {{fundList.fund['Fund Size'] |number}}</div>
+        <div class="cell" > {{fundList.fund.Currency |isNull}} {{fundList.fund['Fund Size']|isNull |number}}</div>
       </div>
 
       <div class="row">
        <div class="cell"> Launch Date </div>
         <div class="cell">:</div>
-        <div class="cell" id="3">{{fundList.fund['Launch Date'] | ldate | date:'yyyy-MM-dd' }} </div>
+        <div class="cell" >{{fundList.fund['Launch Date']|isNull | ldate | date:'yyyy-MM-dd' }} </div>
       </div>
 
-      <!-- bug -- fix placeholder -- does not remove when data are added -->
       <div class="row">
        <div class="cell">Ticker Symbol </div>
         <div class="cell">:</div>
-        <div class="cell" id="4" >{{(fundList.fund['Ticker Symbol']) != '' ? fundList.fund['Ticker Symbol'] : '--'}} </div>
+        <div class="cell"  >{{fundList.fund['Ticker Symbol']|isNull}} </div>
       </div>
 
       <div class="row">
         <div class="cell"></div><div class="cell"></div>
         <div class="cell"> <a href="#/fundInformation" class="btn btn-info" role="button">Full Discr.</a> </div>
       </div>
-
-      <div class="row" ng-repeat="f in arrayList" >{{f.fund.Sector }}</div>
-
     </div>
-
+  </div>
 
 </div>
-</div>
-

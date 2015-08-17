@@ -8,44 +8,44 @@
       <div class="row">
         <div class="cell"> Security  </div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund.security}}</div>
+        <div class="cell">{{fundList.fund.security |isNull}}</div>
       </div>
 
       <div class="row">
         <div class="cell">Fund Amount </div>
         <div class="cell">:</div>
-        <div class="cell"> {{fundList.fund.Currency}} {{fundList.fund['Fund Size'] |currency}}</div>
+        <div class="cell"> {{fundList.fund.Currency |isNull}} {{fundList.fund['Fund Size']|isNull |currency}}</div>
       </div>
 
       <div class="row">
         <div class="cell"> Launch Date  </div>
         <div class="cell">:</div>
-        <div class="cell" >{{fundList.fund['Launch Date'] | ldate | date:'yyyy-MM-dd' }} </div>
+        <div class="cell" >{{fundList.fund['Launch Date']|isNull | ldate | date:'yyyy-MM-dd' }} </div>
       </div>
 
       <!-- bug -- fix placeholder -- does not remove when data are added -->
       <div class="row">
         <div class="cell">Ticker Symbol </div>
         <div class="cell">:</div>
-        <div class="cell"  data-placeholder='--'>{{fundList.fund['Ticker Symbol']}} </div>
+        <div class="cell"  >{{fundList.fund['Ticker Symbol']|isNull}} </div>
       </div>
 
       <div class="row">
         <div class="cell">Sector </div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund.Sector}}</div>
+        <div class="cell">{{fundList.fund.Sector |isNull}}</div>
       </div>
 
       <div class="row">
         <div class="cell">Asset Class </div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund['Asset Class']}}</div>
+        <div class="cell">{{fundList.fund['Asset Class']|isNull}}</div>
       </div>
 
       <div class="row">
         <div class="cell">Investment Style </div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund['Investment Style']}}</div>
+        <div class="cell">{{fundList.fund['Investment Style']|isNull}}</div>
       </div>
 
       <div class="row">
@@ -57,49 +57,43 @@
       <div class="row">
         <div class="cell">NAV </div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund.NAV}}</div>
+        <div class="cell">{{fundList.fund.NAV |isNull}}</div>
       </div>
 
       <div class="row">
         <div class="cell">NAV Change </div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund['NAV Change']}}</div>
+        <div class="cell">{{fundList.fund['NAV Change'] |isNull}}</div>
       </div>
 
       <div class="row">
         <div class="cell">1 Day Return </div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund['1 Day Return']}}</div>
+        <div class="cell">{{fundList.fund['1 Day Return'] |isNull}}</div>
       </div>
 
       <div class="row">
         <div class="cell">YTD Return</div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund['YTD Return']}}</div>
+        <div class="cell">{{fundList.fund['YTD Return']|isNull}}</div>
       </div>
 
       <div class="row">
-        <div class="cell">YTD Return</div>
+        <div class="cell">Fund Size  </div>
         <div class="cell">:</div>
-        <div class="cell">{{(fundList.fund['YTD Return']) != '' ? fundList.fund['YTD Return'] : '--'}}</div>
-      </div>
-
-      <div class="row">
-        <div class="cell">Fund Size</div>
-        <div class="cell">:</div>
-        <div class="cell">{{(fundList.fund['Fund Size']) != '' ? fundList.fund['Fund Size'] : '--'}}</div>
+        <div class="cell">{{ fundList.fund['Fund Size'] |isNull |currency}}</div>
       </div>
 
       <div class="row">
         <div class="cell">Region</div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund['Region']}}</div>
+        <div class="cell">{{fundList.fund.Region|isNull}}</div>
       </div>
 
       <div class="row">
         <div class="cell">Date</div>
         <div class="cell">:</div>
-        <div class="cell">{{fundList.fund.Date |ldate |date:"yyyy-MM-dd"}}</div>
+        <div class="cell">{{fundList.fund.Date |isNull|ldate |date:"yyyy-MM-dd"}}</div>
       </div>
 
     </div>
